@@ -1,7 +1,17 @@
 package ru.bashlykov.chess.models;
 
-public abstract class Figure {
+/**
+ * Figure
+ * абстрактный класс. логика изменения позиции фигуры на поле
+ * @since 04.06.2017
+ * @author Artem Bashlykov (a_bashlykov@inbox.ru)
+ * @version 1
+ */
 
+public abstract class Figure {
+    /**
+     * поля класса
+     */
     private int newX;
 
     private int newY;
@@ -12,15 +22,37 @@ public abstract class Figure {
 
     public final Cell position;
 
+    /**
+     * конструктор обьекта Cell
+     * @param position
+     */
+
     public Figure(Cell position){
         this.position = position;
     }
 
+    /**
+     * геттер для чтения позиции
+     * @return
+     */
     public Cell getPosition() {
         return this.position;
     }
 
+    /**
+     * абстрактный метод. вычисляет расстояние пройденное фигурой
+     * @param dist
+     * @return
+     */
+
     public abstract Cell[] way(Cell dist);
+
+    /**
+     * вычисляет куда и как идет фигура.
+     * возвращает пройденное расстояние в виде массива
+     * @param distance
+     * @return
+     */
 
     public Cell[] moveFigure(Cell distance) {
         int currentX = position.getX();
@@ -96,6 +128,12 @@ public abstract class Figure {
 
         return coveredDistance;
     }
+
+    /**
+     * метож клонирующий координаты фигуры
+     * @param dist
+     * @return
+     */
 
     public abstract Figure clone(Cell dist);
 }

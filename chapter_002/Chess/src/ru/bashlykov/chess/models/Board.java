@@ -6,12 +6,28 @@ import ru.bashlykov.chess.exceptions.OccupiedWayException;
 
 
 /**
- * Created by art on 04.06.17.
+ * Board
+ * класс шахматной доски
+ * @since 04.06.17.
+ * @author Artem Bashlykov (a_bashlykov@inbox.ru)
+ * @version 1
  */
 public class Board {
+   /**
+    * поле класса
+    * количество фигур на поле
+    */
   private static final int numOfPieces = 32;
-
+    /**
+     * массив фиур
+     * информация о состоянии каждой фигуры
+     */
   private Figure[] figures = new Figure[numOfPieces];
+
+    /**
+     * добавляет фигуру на пустую ячейку доски
+     * @param figure
+     */
 
   public void addFigure(Figure figure) {
       for (int i = 0; i < figures.length; i++) {
@@ -21,6 +37,17 @@ public class Board {
           }
       }
   }
+
+    /**
+     * определяет возможность смены положения фигуры на доске
+     * @param source
+     * @param dist
+     * @return
+     * @throws ImpossibleMoveException
+     * @throws OccupiedWayException
+     * @throws FigureNotFoundException
+     */
+
   public boolean move(Cell source, Cell dist) throws ImpossibleMoveException, OccupiedWayException, FigureNotFoundException {
       boolean isNeedSave = false;
 
