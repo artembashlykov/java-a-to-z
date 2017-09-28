@@ -1,9 +1,8 @@
-package ru.abashlykov;
+package main.ru.abashlykov;
 
 public class CircleArrayShift {
 
     public static void shift(int[] arr, int count) {
-
         for(int j = 0; j < count; j++) {
             int temp = arr[arr.length -1];
             for(int i = arr.length -2; i > -1; i--) {
