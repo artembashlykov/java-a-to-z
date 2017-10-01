@@ -1,9 +1,9 @@
-package ru.abashlykov;
+package abashlykov;
 
-import main.ru.abashlykov.CircleArrayShift;
+
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
 
 public class CircleArrayShiftTest {
     @Test
@@ -13,7 +13,7 @@ public class CircleArrayShiftTest {
         int[] expectedArray = {3,4,1,2};
         a.shift(arr, 2);
 
-        assertEquals(expectedArray, arr);
+        Arrays.equals(expectedArray, arr);
     }
 
 }

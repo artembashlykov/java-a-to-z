@@ -1,4 +1,4 @@
-package main.ru.abashlykov;
+package abashlykov;
 
 public class CircleArrayShift {
 
