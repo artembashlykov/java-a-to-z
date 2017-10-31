@@ -12,6 +12,8 @@ public class TimeMeterTest {
     @Test
     public void WhenGetTimeOfInsertionShouldOrderResults(){
         long[] array = new long[100];
+        int amount = array.length / 2;
+        System.out.println(amount);
         String[] sArray = new String[array.length];
         for(int i = 0; i < array.length; i++){
             array[i] = System.nanoTime();
@@ -55,9 +57,9 @@ public class TimeMeterTest {
 
         Value[] removeAction = new Value[3];
 
-        removeAction[0] = new Value(time.remove(arrayList), "ArrayList");
-        removeAction[1] = new Value(time.remove(linkedList), "LinkedList");
-        removeAction[2] = new Value(time.remove(treeSet), "TreeSet");
+        removeAction[0] = new Value(time.remove(arrayList, amount), "ArrayList");
+        removeAction[1] = new Value(time.remove(linkedList, amount), "LinkedList");
+        removeAction[2] = new Value(time.remove(treeSet, amount), "TreeSet");
 
         for(int i = addingAction.length -1; i > 0; i--){
             for(int j = 0; j < i; j++){

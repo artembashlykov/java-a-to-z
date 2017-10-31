@@ -14,10 +14,10 @@ public class TimeMeter {
         return traceTime;
     }
 
-    public static long remove(Collection<String> collection){
+    public static long remove(Collection<String> collection, int amount){
         long start = System.nanoTime();
         Iterator<String> iter = collection.iterator();
-        while(iter.hasNext()){
+        while(iter.hasNext() && collection.size() > amount){
             iter.next();
             iter.remove();
         }
