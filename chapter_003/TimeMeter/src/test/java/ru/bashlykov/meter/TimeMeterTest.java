@@ -13,7 +13,6 @@ public class TimeMeterTest {
     public void WhenGetTimeOfInsertionShouldOrderResults(){
         long[] array = new long[100];
         int amount = array.length / 2;
-        System.out.println(amount);
         String[] sArray = new String[array.length];
         for(int i = 0; i < array.length; i++){
             array[i] = System.nanoTime();
