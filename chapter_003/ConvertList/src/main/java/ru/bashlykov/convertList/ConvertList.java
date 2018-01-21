@@ -39,4 +39,24 @@ public class ConvertList {
 
         return array2D;
     }
+
+//    public static void main(String[] args) {
+//        ArrayList<int[]> smth = new ArrayList<>();
+//        int[] i = {1,2,3};
+//        smth.add(i);
+//        convert(smth);
+//    }
+
+    public static List<Integer> convert (List<int[]> list){
+
+        List<Integer> IntList = new ArrayList<>();
+        for(int j = 0; j < list.size(); j++) {
+            for (int i = 0; i < list.get(j).length; i++) {
+                IntList.add(list.get(j)[i]);
+            }
+        }
+
+        return IntList;
+    }
+
 }
