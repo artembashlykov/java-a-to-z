@@ -40,13 +40,6 @@ public class ConvertList {
         return array2D;
     }
 
-//    public static void main(String[] args) {
-//        ArrayList<int[]> smth = new ArrayList<>();
-//        int[] i = {1,2,3};
-//        smth.add(i);
-//        convert(smth);
-//    }
-
     public static List<Integer> convert (List<int[]> list){
 
         List<Integer> IntList = new ArrayList<>();
