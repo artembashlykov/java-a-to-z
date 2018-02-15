@@ -16,6 +16,7 @@ public class StubInput implements Input {
 
     public int ask(String question, int[] range){
 //        throw new UnsupportedOperationException("Unsupported operation");
-        return -1;
+        int i = Integer.valueOf(answers[position++]);
+        return i;
     }
 }

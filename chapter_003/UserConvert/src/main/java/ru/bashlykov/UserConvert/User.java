@@ -1,10 +1,20 @@
-package main.java.ru.bashlykov.UserConvert;
+package ru.bashlykov.UserConvert;
 
 public class User {
-    public String name;
+    private String name;
+    private Integer id;
 
-
-    public User(String name){
+    public User(Integer id, String name){
         this.name = name;
+        this.id = id;
     }
+
+    public Integer getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+
 }
+

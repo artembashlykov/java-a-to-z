@@ -1,7 +1,4 @@
-package test.java.ru.bashlykov.UserConvert;
-
-import main.java.ru.bashlykov.UserConvert.User;
-import main.java.ru.bashlykov.UserConvert.UserConvert;
+package ru.bashlykov.UserConvert;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,9 +9,9 @@ public class UserConvertTest {
    public void WhenGivenAListShouldReturnAMap(){
         UserConvert usCon = new UserConvert();
         List<User> userList = new ArrayList<>();
-        userList.add(new User("Bob"));
-        userList.add(new User("Rob"));
-        userList.add(new User("Some grumpy fartman"));
+        userList.add(new User(0,"Bob"));
+        userList.add(new User(1,"Rob"));
+        userList.add(new User(2,"Some grumpy man"));
 
         HashMap<Integer, User> returnResult =  usCon.process(userList);
         List<User> checkUserList = new ArrayList<>();

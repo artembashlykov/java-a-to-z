@@ -1,4 +1,4 @@
-package main.java.ru.bashlykov.UserConvert;
+package ru.bashlykov.UserConvert;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,12 +6,11 @@ import java.util.List;
 public class UserConvert {
 
     public HashMap <Integer, User> process(List<User> list){
-        HashMap<Integer, User> userMap = new HashMap<Integer, User>();
+        HashMap<Integer, User> userMap = new HashMap<>();
 
-        for(int i = 0; i < list.size(); i++){
-           userMap.put(i , list.get(i));
+        for(User users: list){
+           userMap.put(users.getId(), users);
         }
-
         return userMap;
     }
 }
