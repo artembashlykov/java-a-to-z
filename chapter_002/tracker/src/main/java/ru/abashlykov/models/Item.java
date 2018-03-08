@@ -7,25 +7,24 @@ public class Item {
 	
 	public String description;
 	
-	public long create;
-	
 	public Item(){
 		}
 	
-	public Item(String name, String description, long create) {
+	public Item(String name, String description, String id) {
 		this.name = name;
 		this.description = description;
-		this.create = create;
+		this.id = id;
 		}
+	public Item(String name, String description){
+		this.name = name;
+		this.description = description;
+	}
 		
 		public String getName(){
 			return this.name;
 			}
 		public String getDescription(){
 			return this.description;
-			}
-		public long getCreate(){
-			return this.create;
 			}
 		public String getId(){
 				return this.id;

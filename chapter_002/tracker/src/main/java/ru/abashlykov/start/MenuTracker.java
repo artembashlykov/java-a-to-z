@@ -1,11 +1,12 @@
 package ru.abashlykov.start;
 import ru.abashlykov.models.*;
 
+import java.util.ArrayList;
+
 public class MenuTracker {
     private Input input;
     private Tracker tracker;
-    private UserAction[] actions = new UserAction[7];
-    private int position = 0;
+    private ArrayList<UserAction> actions = new ArrayList<>();
 
     public MenuTracker(Input input, Tracker tracker){
         this.input = input;
@@ -13,20 +14,20 @@ public class MenuTracker {
     }
 
       public void fillActions(){
-        this.actions[position++] = new AddItem("Add item.", 0);
-        this.actions[position++] = new MenuTracker.ShowItems("Show all items.", 1);
-        this.actions[position++] = new EditItem("Edit item.", 2);
-        this.actions[position++] = new DeleteItem("Delete item.", 3);
-        this.actions[position++] = new FindItemByName("Find item by name.", 4);
-        this.actions[position++] = new FindItemById("Find item by ID.", 5);
+        this.actions.add(new AddItem("Add item.", 0));
+        this.actions.add(new MenuTracker.ShowItems("Show all items.", 1));
+        this.actions.add(new EditItem("Edit item.", 2));
+        this.actions.add(new DeleteItem("Delete item.", 3));
+        this.actions.add(new FindItemByName("Find item by name.", 4));
+        this.actions.add(new FindItemById("Find item by ID.", 5));
     }
     public void addAction(UserAction action){
-          this.actions[position++] = action;
+          this.actions.add(action);
 
     }
 
-    public void select(int key){
-        this.actions[key].execute(this.input, this.tracker);
+    public void select(Integer key){
+        this.actions.get(key).execute(this.input, this.tracker);
     }
 
     public void show(){
@@ -117,9 +118,10 @@ public class MenuTracker {
             String id =  input.ask("Please enter the task's ID: ");
             String name = input.ask("Please enter the task's name: ");
             String desc = input.ask("Please enter the task's desc: ");
-            Task task = new Task(name, desc);
-            task.setId(id);
-            tracker.edit(task);
+//            Task task = new Task(name, desc);
+//            task.setId(id);
+            Item item = new Item(name, desc, id);
+            tracker.edit(id, item);
         }
         @Override
         public String info(){

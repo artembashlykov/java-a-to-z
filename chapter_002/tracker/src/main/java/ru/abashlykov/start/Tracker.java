@@ -4,13 +4,12 @@ import ru.abashlykov.models.*;
 import java.util.*;
 
 public class Tracker {
-	private Item[] items = new Item[10];
-	private int position = 0;
+	private ArrayList<Item> items = new ArrayList<>();
 	private static final Random RN = new Random();
 	public Item findByName(String key){
 		Item result = null;
         for(Item byName : this.items){
-            if(byName.getName().indexOf(key) != -1){
+            if(byName.getName().equals(key)){
             	result = byName;
             	break;
             }
@@ -18,25 +17,28 @@ public class Tracker {
         return result;
     }
 	public void delete(String id) {
-		for (Item searchElementForDelete : this.items) {
-			if (searchElementForDelete != null && searchElementForDelete.getId().equals(id)) {
-				searchElementForDelete.name = null;
-				searchElementForDelete.description = null;
+		List<Item> toRemove = new ArrayList<>();
+		for(Item it : items){
+			if(it.getId().equals(id)){
+				toRemove.add(it);
 			}
 		}
+		items.removeAll(toRemove);
 	}
-	public void edit(Item fresh){
-		for(int index = 0; index != items.length;++index){
-			Item item = items[index];
-			if(item != null && item.getId().equals(fresh.getId())){
-				items[index] = fresh;
+
+	public void edit(String id, Item newItem){
+		for(int index = 0; index != items.size();++index){
+			Item item = items.get(index);
+			if(item != null && id.equals(newItem.getId())){
+				items.set(index, newItem);
 				break;
 			}
 		}
 	}
+
 	public Item add(Item item) {
 			item.setId(this.generateId());
-			this.items[position++] = item;
+			this.items.add(item);
 			return item;
 	}
 
@@ -53,11 +55,9 @@ public class Tracker {
 	String generateId(){
 		return String.valueOf(System.currentTimeMillis() + RN.nextInt(100));
 			}
-	public Item[] getAll(){
-		Item[] result = new Item[position];
-		for(int index = 0; index != this.position; index++){
-			result[index] = this.items[index];
-			}
+	public ArrayList<Item> getAll(){
+		ArrayList<Item> result = new ArrayList<>();
+		result.addAll(items);
 			return result;
 		}
 }
