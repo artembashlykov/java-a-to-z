@@ -1,6 +1,7 @@
 package src.main.java.ru.abashlykov.search;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PhoneDictionary {
@@ -20,6 +21,12 @@ public class PhoneDictionary {
                 result.add(element);
             } else System.out.println("Did not found a shit!");
         }
+
+//        Iterator<Person> element = persons.iterator();
+//        while(element.hasNext()){
+//            if(element.getName().contains(key) | element.getSurname().contains(key) | element.getPhone().contains(key) |
+////                    element.getAddress().contains(key))
+//        }
 
         return result;
     }
