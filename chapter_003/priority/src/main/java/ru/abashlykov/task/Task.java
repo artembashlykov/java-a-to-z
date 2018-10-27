@@ -1,4 +1,4 @@
-package src.main.java.ru.abashlykov.task;
+package main.java.ru.abashlykov.task;
 
 public class Task {
     private String desc;
