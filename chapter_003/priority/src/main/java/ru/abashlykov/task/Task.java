@@ -1,4 +1,4 @@
-package main.java.ru.abashlykov.task;
+package сonvertListToArray.main.java.ru.abashlykov.task;
 
 public class Task {
     private String desc;

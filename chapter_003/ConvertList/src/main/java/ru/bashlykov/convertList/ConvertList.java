@@ -1,4 +1,4 @@
-package main.java.ru.bashlykov.convertList;
+package сonvertListToArray.main.java.ru.bashlykov.convertList;
 
 import java.util.ArrayList;
 import java.util.List;

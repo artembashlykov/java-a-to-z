@@ -1,7 +1,6 @@
-package main.java.ru.abashlykov.task;
+package сonvertListToArray.main.java.ru.abashlykov.task;
 
 import java.util.LinkedList;
-import main.java.ru.abashlykov.task.Task;
 
 public class PriorityQueue {
     private LinkedList<Task> tasks = new LinkedList<>();

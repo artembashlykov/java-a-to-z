@@ -1,6 +1,5 @@
 package test.java.ru.bashlykov.convertList;
-import main.java.ru.bashlykov.convertList.ConvertList;
-import org.junit.Assert;
+import сonvertListToArray.main.java.ru.bashlykov.convertList.ConvertList;
 import org.junit.Test;
 
 import java.util.ArrayList;

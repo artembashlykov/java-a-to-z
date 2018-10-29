@@ -1,7 +1,7 @@
 package test.java.ru.bashlykov.meter;
 
 
-import main.java.ru.bashlykov.meter.TimeMeter;
+import сonvertListToArray.main.java.ru.bashlykov.meter.TimeMeter;
 import org.junit.Test;
 
 import java.util.ArrayList;

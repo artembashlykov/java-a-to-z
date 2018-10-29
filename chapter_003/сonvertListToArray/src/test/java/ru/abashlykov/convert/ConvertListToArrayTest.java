@@ -2,7 +2,7 @@ package test.java.ru.abashlykov.convert;
 
 import java.util.Arrays;
 
-import main.java.ru.abashlykov.convert.ConvertList2Array;
+import сonvertListToArray.main.java.ru.abashlykov.convert.ConvertList2Array;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

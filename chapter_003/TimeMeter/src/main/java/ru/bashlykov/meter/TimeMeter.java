@@ -1,4 +1,4 @@
-package main.java.ru.bashlykov.meter;
+package сonvertListToArray.main.java.ru.bashlykov.meter;
 
 import java.util.*;
 
