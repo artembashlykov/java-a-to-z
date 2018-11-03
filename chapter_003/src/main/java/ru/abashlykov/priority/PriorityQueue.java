@@ -1,4 +1,4 @@
-package main.java.ru.abashlykov.task;
+package ru.abashlykov.priority;
 
 import java.util.LinkedList;
 
@@ -7,13 +7,11 @@ public class PriorityQueue {
 
     public void put(Task task) {
         int itemIndex = 0;
-        for (int i = 0; i < tasks.size(); i++ ){
-            if(tasks.isEmpty()){
-                break;
-            }else if(tasks.get(i).getPriority() >= task.getPriority() | (i+1) == tasks.size()){
-                itemIndex = i;
+        for (Task t : tasks){
+            if(t.getPriority() > task.getPriority()){
                 break;
             }
+            itemIndex++;
         }
         tasks.add(itemIndex, task);
     }

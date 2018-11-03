@@ -1,4 +1,4 @@
-package main.java.ru.abashlykov.task;
+package ru.abashlykov.priority;
 
 public class Task {
     private String desc;

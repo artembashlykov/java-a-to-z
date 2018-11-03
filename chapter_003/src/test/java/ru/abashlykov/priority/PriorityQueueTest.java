@@ -1,8 +1,6 @@
-package test.java.ru.abashlykov.task;
+package ru.abashlykov.priority;
 
 import org.junit.Test;
-import main.java.ru.abashlykov.task.PriorityQueue;
-import main.java.ru.abashlykov.task.Task;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
